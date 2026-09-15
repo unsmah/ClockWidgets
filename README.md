@@ -16,12 +16,15 @@ The APK is built by GitHub Actions.
 
 ## Get the APK
 
-1. Open the **Actions** tab of this repository.
-2. Pick the newest **Build Android APK** run (they also run on every push to `main`).
-3. Download the **clock-widgets-debug** artifact and unzip it — that is your `app-debug.apk`.
-4. Copy the APK to the phone and install it (allow "install unknown apps" for your file
-   manager / browser when asked). It is signed with the standard debug key, which is fine
-   for personal use.
+**Easiest:** open the [Releases](../../releases/latest) page and download `app-debug.apk`
+straight to your phone (no account needed).
+
+**From a build:** open the **Actions** tab, pick the newest **Build Android APK** run, and
+download the **clock-widgets-debug** artifact (a zip containing `app-debug.apk`).
+
+Then install the APK on the phone (allow "install unknown apps" for your file manager /
+browser when asked). The APK is signed with the standard debug key, which is fine for
+personal use.
 
 ## Add a widget
 
