@@ -31,6 +31,9 @@ jobs:
       - name: Build Debug APK
         run: gradle assembleDebug --no-daemon
 
+      - name: Lint (checks the RemoteViews widget layouts and resources)
+        run: gradle :app:lintDebug --no-daemon
+
       - name: Show APK info
         run: ls -lh app/build/outputs/apk/debug/
 
