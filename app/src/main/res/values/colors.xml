@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App chrome -->
+    <color name="app_background">#0E1120</color>
+    <color name="card_background">#1A1F36</color>
+    <color name="card_border">#2A3157</color>
+    <color name="text_primary">#F2F4FF</color>
+    <color name="text_secondary">#9AA3C7</color>
+    <color name="accent_selected_border">#FFFFFF</color>
+
+    <!-- Widget backgrounds -->
+    <color name="widget_dark">#CC11162B</color>
+    <color name="widget_light">#F2FFFFFF</color>
+    <color name="widget_dial">#66121426</color>
+
+    <!-- Widget text -->
+    <color name="widget_text_on_dark">#F5F7FF</color>
+    <color name="widget_text_on_light">#12162B</color>
+    <color name="widget_subtext_on_dark">#9AA3C7</color>
+    <color name="widget_subtext_on_light">#5A6180</color>
+
+    <!-- Accent palette -->
+    <color name="accent_blue">#7C8CFF</color>
+    <color name="accent_cyan">#4DD0E1</color>
+    <color name="accent_green">#66D9A0</color>
+    <color name="accent_amber">#FFB74D</color>
+    <color name="accent_pink">#FF7BAC</color>
+    <color name="accent_white">#FFFFFF</color>
+</resources>

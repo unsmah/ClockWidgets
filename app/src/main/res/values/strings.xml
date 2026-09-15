@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Clock Widgets</string>
+    <string name="config_title">Clock settings</string>
+
+    <!-- Widget names / descriptions (shown in the widget picker) -->
+    <string name="widget_digital_name">Digital clock</string>
+    <string name="widget_digital_description">Time, weekday and date on a rounded card.</string>
+    <string name="widget_analog_name">Analog clock</string>
+    <string name="widget_analog_description">Classic dial with the date underneath.</string>
+    <string name="widget_minimal_name">Minimal clock</string>
+    <string name="widget_minimal_description">Transparent background, time only. Perfect over a wallpaper.</string>
+
+    <!-- Main screen -->
+    <string name="main_subtitle">Three home-screen clocks. Tap a widget to restyle it any time.</string>
+    <string name="section_previews">Available widgets</string>
+    <string name="section_placed">On your home screen</string>
+    <string name="add_to_home">Add to home screen</string>
+    <string name="placed_empty">No widgets added yet. Use “Add to home screen”, or long-press an empty spot on your home screen and pick “Widgets”.</string>
+    <string name="placed_count">%1$d placed</string>
+    <string name="row_summary_format">%1$s · %2$s · %3$s</string>
+    <string name="configure">Configure</string>
+    <string name="remove_widget">Remove</string>
+    <string name="remove_done">Widget removed</string>
+    <string name="help_title">How to add a widget</string>
+    <string name="help_body">1. Tap “Add to home screen” above and confirm the system prompt.\n\nIf your launcher does not support that: long-press an empty area of the home screen › Widgets › Clock Widgets › pick a clock and drag it where you want it.\n\nTap any clock on the home screen to change its format, colour and background.</string>
+    <string name="picker_title">Add clock widget</string>
+
+    <!-- Add / pin flow -->
+    <string name="pin_unsupported">Your launcher does not support one-tap adding. Long-press an empty spot on the home screen and choose “Widgets”.</string>
+    <string name="pin_requested">Confirm on the system prompt to place the %1$s.</string>
+    <string name="pin_failed">Could not open the launcher widget picker on this device. Long-press the home screen and choose “Widgets”.</string>
+    <string name="appwidget_removed">Widget removed from the home screen</string>
+
+    <!-- Config screen -->
+    <string name="cfg_time_format">Time format</string>
+    <string name="cfg_format_24">24-hour</string>
+    <string name="cfg_format_12">12-hour</string>
+    <string name="cfg_seconds">Show seconds</string>
+    <string name="cfg_show_date">Show weekday and date</string>
+    <string name="cfg_accent">Accent colour</string>
+    <string name="cfg_background">Background</string>
+    <string name="cfg_bg_dark">Dark</string>
+    <string name="cfg_bg_light">Light</string>
+    <string name="cfg_bg_transparent">Transparent</string>
+    <string name="cfg_preview">Preview</string>
+    <string name="cfg_save">Save</string>
+    <string name="cfg_cancel">Cancel</string>
+    <string name="cfg_saved">Clock updated</string>
+    <string name="cfg_missing_id">This widget is no longer on the home screen.</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_cyan">Cyan</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_amber">Amber</string>
+    <string name="accent_pink">Pink</string>
+    <string name="accent_white">White</string>
+</resources>
