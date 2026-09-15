@@ -52,6 +52,14 @@ public class ClockConfig {
         return showSeconds ? R.id.widget_time_12s : R.id.widget_time_12;
     }
 
+    /** Number of characters of the visible time, used to scale the text to the widget size. */
+    public int timeCharCount() {
+        if (use24Hour) {
+            return showSeconds ? 8 : 5;
+        }
+        return showSeconds ? 9 : 6;
+    }
+
     /** The id of the background layer that matches the requested style. */
     public int backgroundViewId() {
         switch (backgroundStyle) {

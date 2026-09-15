@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Digital clock widget.
-     RemoteViews only supports a fixed set of view classes, so the whole widget is made of
-     FrameLayout / LinearLayout / TextClock parts and every user option (12-24 hour, seconds,
-     date, background) is applied with a visibility toggle: no reflection based RemoteViews
-     calls are needed.
-     TextClock ticks itself and re-formats on ACTION_TIME_CHANGED / TIMEZONE_CHANGED, so the
-     clock needs no alarms, receivers or background service to stay correct. -->
+<!-- Digital clock: time on a rounded card with the weekday and date underneath. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Background layers: exactly one of them is VISIBLE -->
-    <FrameLayout
-        android:id="@+id/bg_dark"
+    <include
+        layout="@layout/widget_part_background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/widget_bg_dark" />
-
-    <FrameLayout
-        android:id="@+id/bg_light"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/widget_bg_light"
-        android:visibility="gone" />
-
-    <FrameLayout
-        android:id="@+id/bg_transparent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/widget_bg_transparent"
-        android:visibility="gone" />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,73 +17,10 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <FrameLayout
+        <include
+            layout="@layout/widget_part_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <!-- 24-hour, no seconds -->
-            <TextClock
-                android:id="@+id/widget_time_24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="HH:mm"
-                android:format24Hour="HH:mm"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/accent_blue"
-                android:textSize="32sp" />
-
-            <!-- 24-hour with seconds -->
-            <TextClock
-                android:id="@+id/widget_time_24s"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="HH:mm:ss"
-                android:format24Hour="HH:mm:ss"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/accent_blue"
-                android:textSize="32sp"
-                android:visibility="gone" />
-
-            <!-- 12-hour, no seconds -->
-            <TextClock
-                android:id="@+id/widget_time_12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="h:mm a"
-                android:format24Hour="h:mm a"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/accent_blue"
-                android:textSize="32sp"
-                android:visibility="gone" />
-
-            <!-- 12-hour with seconds -->
-            <TextClock
-                android:id="@+id/widget_time_12s"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="h:mm:ss a"
-                android:format24Hour="h:mm:ss a"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/accent_blue"
-                android:textSize="32sp"
-                android:visibility="gone" />
-        </FrameLayout>
+            android:layout_height="wrap_content" />
 
         <TextClock
             android:id="@+id/widget_date"

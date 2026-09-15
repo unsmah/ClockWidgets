@@ -77,8 +77,8 @@ public class ClockConfigActivity extends AppCompatActivity {
         dateCheck = findViewById(R.id.check_date);
         accentRow = findViewById(R.id.accent_row);
 
-        // An analog dial has no digital text, so those options would do nothing there.
-        if (kind == ClockRemoteViews.KIND_ANALOG) {
+        // The analog designs have no digital text, so those options would do nothing there.
+        if (!ClockRemoteViews.hasDigitalTime(kind)) {
             findViewById(R.id.format_label).setVisibility(View.GONE);
             formatGroup.setVisibility(View.GONE);
             secondsCheck.setVisibility(View.GONE);

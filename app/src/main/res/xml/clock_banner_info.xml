@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Minimal clock: transparent, can be squeezed down to a single small row. -->
+<!-- Wide clock: one row high by default, stretch it sideways to fill the screen. -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:description="@string/widget_minimal_description"
-    android:initialLayout="@layout/widget_minimal"
+    android:description="@string/widget_banner_description"
+    android:initialLayout="@layout/widget_banner"
     android:minHeight="40dp"
     android:minResizeHeight="40dp"
-    android:minResizeWidth="110dp"
-    android:minWidth="110dp"
-    android:previewLayout="@layout/widget_minimal"
+    android:minResizeWidth="150dp"
+    android:minWidth="220dp"
+    android:previewLayout="@layout/widget_banner"
     android:resizeMode="horizontal|vertical"
     android:targetCellHeight="1"
-    android:targetCellWidth="2"
+    android:targetCellWidth="4"
     android:updatePeriodMillis="1800000"
     android:widgetCategory="home_screen" />

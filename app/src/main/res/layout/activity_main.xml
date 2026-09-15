@@ -100,7 +100,6 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/add_to_home" />
         </LinearLayout>
-    <!-- Minimal -->
         <LinearLayout
             style="@style/Card"
             android:layout_width="match_parent"
@@ -128,6 +127,111 @@
 
             <Button
                 android:id="@+id/add_minimal"
+                style="@style/PrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_to_home" />
+        </LinearLayout>
+
+        <!-- Wide -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/WidgetCardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_banner_name" />
+
+            <TextView
+                style="@style/WidgetCardSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_banner_description" />
+
+            <FrameLayout
+                android:id="@+id/preview_banner"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/preview_backdrop" />
+
+            <Button
+                android:id="@+id/add_banner"
+                style="@style/PrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_to_home" />
+        </LinearLayout>
+
+        <!-- Date focus -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/WidgetCardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_calendar_name" />
+
+            <TextView
+                style="@style/WidgetCardSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_calendar_description" />
+
+            <FrameLayout
+                android:id="@+id/preview_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/preview_backdrop" />
+
+            <Button
+                android:id="@+id/add_calendar"
+                style="@style/PrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_to_home" />
+        </LinearLayout>
+
+        <!-- Duo -->
+        <LinearLayout
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                style="@style/WidgetCardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_duo_name" />
+
+            <TextView
+                style="@style/WidgetCardSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_duo_description" />
+
+            <FrameLayout
+                android:id="@+id/preview_duo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/preview_backdrop" />
+
+            <Button
+                android:id="@+id/add_duo"
                 style="@style/PrimaryButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

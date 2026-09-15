@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Digital clock: resizable in both directions, the text scales with the widget. -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:description="@string/widget_digital_description"
     android:initialLayout="@layout/widget_digital"
     android:minHeight="110dp"
-    android:minResizeHeight="60dp"
+    android:minResizeHeight="70dp"
     android:minResizeWidth="110dp"
     android:minWidth="180dp"
     android:previewLayout="@layout/widget_digital"

@@ -10,9 +10,15 @@
     <string name="widget_analog_description">Classic dial with the date underneath.</string>
     <string name="widget_minimal_name">Minimal clock</string>
     <string name="widget_minimal_description">Transparent background, time only. Perfect over a wallpaper.</string>
+    <string name="widget_banner_name">Wide clock</string>
+    <string name="widget_banner_description">Time and date side by side — made for wide, short widgets.</string>
+    <string name="widget_calendar_name">Date focus clock</string>
+    <string name="widget_calendar_description">Big day number with weekday, month and the time below.</string>
+    <string name="widget_duo_name">Duo clock</string>
+    <string name="widget_duo_description">Analog dial on top, digital time and date underneath.</string>
 
     <!-- Main screen -->
-    <string name="main_subtitle">Three home-screen clocks. Tap a widget to restyle it any time.</string>
+    <string name="main_subtitle">Six resizable home-screen clocks. Tap a widget to restyle it any time.</string>
     <string name="section_previews">Available widgets</string>
     <string name="section_placed">On your home screen</string>
     <string name="add_to_home">Add to home screen</string>

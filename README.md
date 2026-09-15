@@ -1,16 +1,25 @@
 # Clock Widgets
 
-A small Android app that adds three clock widgets to your home screen:
+A small Android app that adds six clock widgets to your home screen:
 
 | Widget | What it shows |
 | --- | --- |
 | **Digital clock** | Time on a rounded card, with the weekday and date underneath |
 | **Analog clock** | Classic dial with the date underneath |
 | **Minimal clock** | Transparent background, big time only — perfect over a wallpaper |
+| **Wide clock** | Time and date side by side, one row high |
+| **Date focus clock** | Big day number with the weekday, month and a smaller time |
+| **Duo clock** | Analog dial on top, digital time and date underneath |
 
 Every clock can be restyled: 12- or 24-hour, optional seconds, optional date,
 six accent colours and a dark / light / transparent background. Because each widget keeps
 its own settings, you can put several clocks on the home screen with different looks.
+
+**Every design is size-aware:** the widgets are resizable in both directions and the text
+is scaled from the current widget size on every redraw — a clock stretched over half the
+home screen gets a big face, a small one stays compact. Designs also adapt themselves: the
+Wide clock drops its date column when it gets narrow, and low widgets hide the date line
+when there is no room for it.
 
 The APK is built by GitHub Actions.
 
@@ -37,19 +46,20 @@ personal use.
 
 ## How it works
 
-* `MainActivity` — live previews of the three widgets (rendered from the very same
-  RemoteViews that the home screen uses), the one-tap add button and the list of clocks that
-  are currently placed.
+* `MainActivity` — live previews of all six widgets (rendered from the very same
+  RemoteViews that the home screen uses), the one-tap add buttons and the list of clocks
+  that are currently placed.
 * `ClockConfigActivity` — the settings screen. It is declared with
   `android.appwidget.action.APPWIDGET_CONFIGURE`, so the launcher opens it straight after a
   widget is dropped on the home screen (the widget is only kept when it returns `RESULT_OK`
   with the app widget id). Tapping a placed clock opens the same screen.
-* `widget/*WidgetProvider` — `AppWidgetProvider`s; every update rebuilds the RemoteViews from
-  the settings stored for that app widget id.
-* `ClockRemoteViews` — builds those RemoteViews. Only documented widget APIs are used
-  (`setViewVisibility`, `setTextColor`, `setOnClickPendingIntent`) together with
-  `TextClock` / `AnalogClock`, which keep ticking on their own — so the widgets need no
-  alarms, no background service and no wake locks.
+* `widget/*WidgetProvider` — one `AppWidgetProvider` per design; every update rebuilds the
+  RemoteViews from the settings stored for that app widget id.
+* `ClockRemoteViews` — builds those RemoteViews for all six designs and sizes every text
+  from the current widget size (`WidgetSize` reads the min/max options). Only documented
+  widget APIs are used (`setViewVisibility`, `setTextColor`, `setTextViewTextSize`,
+  `setOnClickPendingIntent`) together with `TextClock` / `AnalogClock`, which keep ticking
+  on their own — so the widgets need no alarms, no background service and no wake locks.
 * `ClockPrefs` / `ClockConfig` — per widget id persistence (12/24 hour, seconds, date,
   accent colour, background style).
 

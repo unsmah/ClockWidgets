@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Minimal clock widget: transparent by default, one big line of text. -->
+<!-- Minimal clock: transparent by default, big time only. The background layers are written out
+     here instead of using the shared part so that the transparent layer is the visible one in
+     the widget picker preview. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
@@ -32,69 +34,10 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <FrameLayout
+        <include
+            layout="@layout/widget_part_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextClock
-                android:id="@+id/widget_time_24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="HH:mm"
-                android:format24Hour="HH:mm"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/widget_text_on_dark"
-                android:textSize="40sp" />
-
-            <TextClock
-                android:id="@+id/widget_time_24s"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="HH:mm:ss"
-                android:format24Hour="HH:mm:ss"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/widget_text_on_dark"
-                android:textSize="40sp"
-                android:visibility="gone" />
-
-            <TextClock
-                android:id="@+id/widget_time_12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="h:mm a"
-                android:format24Hour="h:mm a"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/widget_text_on_dark"
-                android:textSize="40sp"
-                android:visibility="gone" />
-
-            <TextClock
-                android:id="@+id/widget_time_12s"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
-                android:format12Hour="h:mm:ss a"
-                android:format24Hour="h:mm:ss a"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:maxLines="1"
-                android:textColor="@color/widget_text_on_dark"
-                android:textSize="40sp"
-                android:visibility="gone" />
-        </FrameLayout>
+            android:layout_height="wrap_content" />
 
         <TextClock
             android:id="@+id/widget_date"

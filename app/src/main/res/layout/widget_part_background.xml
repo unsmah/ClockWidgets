@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared background layers. Exactly one layer is VISIBLE; ClockRemoteViews switches them
+     according to the "Background" setting (dark, light or transparent). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/bg_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/widget_bg_dark" />
+
+    <FrameLayout
+        android:id="@+id/bg_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/widget_bg_light"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/bg_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/widget_bg_transparent"
+        android:visibility="gone" />
+</FrameLayout>

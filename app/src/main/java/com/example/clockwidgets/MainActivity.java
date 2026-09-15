@@ -23,22 +23,24 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private static final int[] KINDS = {
-            ClockRemoteViews.KIND_DIGITAL,
-            ClockRemoteViews.KIND_ANALOG,
-            ClockRemoteViews.KIND_MINIMAL
-    };
+    private static final int[] KINDS = ClockRemoteViews.ALL_KINDS;
 
     private static final int[] PREVIEW_HOST_IDS = {
             R.id.preview_digital,
             R.id.preview_analog,
-            R.id.preview_minimal
+            R.id.preview_minimal,
+            R.id.preview_banner,
+            R.id.preview_calendar,
+            R.id.preview_duo
     };
 
     private static final int[] ADD_BUTTON_IDS = {
             R.id.add_digital,
             R.id.add_analog,
-            R.id.add_minimal
+            R.id.add_minimal,
+            R.id.add_banner,
+            R.id.add_calendar,
+            R.id.add_duo
     };
 
     private final Handler handler = new Handler(Looper.getMainLooper());

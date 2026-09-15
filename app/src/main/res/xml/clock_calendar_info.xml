@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Analog clock: the dial scales with the widget, so it can be resized freely. -->
+<!-- Date focus clock: square by default, the day number grows with the widget. -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:description="@string/widget_analog_description"
-    android:initialLayout="@layout/widget_analog"
+    android:description="@string/widget_calendar_description"
+    android:initialLayout="@layout/widget_calendar"
     android:minHeight="110dp"
     android:minResizeHeight="90dp"
-    android:minResizeWidth="90dp"
+    android:minResizeWidth="110dp"
     android:minWidth="110dp"
-    android:previewLayout="@layout/widget_analog"
+    android:previewLayout="@layout/widget_calendar"
     android:resizeMode="horizontal|vertical"
     android:targetCellHeight="2"
     android:targetCellWidth="2"
