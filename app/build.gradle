@@ -14,12 +14,6 @@ android {
         versionName "1.0"
     }
 
-    lint {
-        // Print findings in the CI log so they are readable without downloading the report.
-        textReport true
-        textOutput 'stdout'
-    }
-
     buildTypes {
         release { minifyEnabled false }
     }

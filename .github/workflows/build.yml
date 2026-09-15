@@ -38,6 +38,10 @@ jobs:
       - name: Lint (checks the RemoteViews widget layouts and resources)
         run: gradle :app:lintDebug --no-daemon
 
+      - name: Show lint findings
+        if: always()
+        run: cat app/build/reports/lint-results-debug.txt || true
+
       - name: Show APK info
         run: ls -lh app/build/outputs/apk/debug/
 
